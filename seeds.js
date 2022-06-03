@@ -1,4 +1,3 @@
-
 var mongoose = require("mongoose");
 var Product = require("./models/product");
 
@@ -211,14 +210,6 @@ var data = [
 ]
 
 function seedDB(){
-    //Remove all campgrounds
-    // Product.remove({}, function(err){
-    //     if(err){
-    //         console.log(err);
-    //     }
-    // })
-    //      console.log("removed campgrounds!");
-        //   add a few campgrounds
     data.forEach(function(seed){
         Product.create(seed, function(err, product){
             if(err){
@@ -232,4 +223,3 @@ function seedDB(){
 
 
  module.exports = seedDB;
- 
